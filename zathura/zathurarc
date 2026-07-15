@@ -1,0 +1,11 @@
+set font "Maple Mono 11"
+set selection-clipboard clipboard
+set recolor true
+set recolor-lightcolor "#1e1e1e"
+set recolor-darkcolor "#d8d8d8"
+set recolor-keephue true
+set staturbar-basename true
+set smooth-scroll true
+set adjust-open "best-fit"
+set page-padding 2
+set window-title-basename true

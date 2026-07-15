@@ -1,0 +1,9 @@
+gh/
+vesktop/
+*.pem
+*.key
+.env
+.env.*
+**/cache/
+**/.cache/
+*.log

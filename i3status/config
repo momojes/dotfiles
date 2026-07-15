@@ -1,0 +1,26 @@
+general {
+	colors = true
+	interval = 5
+}
+
+order += "memory"
+order += "battery all"
+order += "tztime local"
+
+memory {
+	format = "%used | %total"
+}
+
+battery all {
+	format = "BAT %percentage"
+	format_down = "BAT unavailable"
+	status_chr = "CHR"
+	status_bat = "BAT"
+	status_unk = "UNK"
+	status_full = "FULL"
+	low_threshold = 15
+}
+
+tztime local {
+	format = "%a %b %d %H:%M"
+}
