@@ -172,6 +172,7 @@
    ("\\.markdown\\'" . markdown-mode))
   :hook
   (markdown-mode . visual-line-mode)
+  (markdown-mode . variable-pitch-mode)
   :custom
   (markdown-command "pandoc")
   (markdown-fontify-code-blocks-natively t)
