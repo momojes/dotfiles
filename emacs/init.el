@@ -164,3 +164,22 @@
 
 (use-package ox-hugo
   :after ox)
+
+(use-package markdown-mode
+  :mode
+  (("README\\.md\\'" . gfm-mode)
+   ("\\.md\\'" . markdown-mode)
+   ("\\.markdown\\'" . markdown-mode))
+  :hook
+  (markdown-mode . visual-line-mode)
+  :custom
+  (markdown-command "pandoc")
+  (markdown-fontify-code-blocks-natively t)
+  (markdown-hide-urls nil)
+  (markdown-header-scaling t))
+
+(use-package grip-mode
+  :after markdown-mode
+  :bind
+  (:map markdown-mode-command-map
+	("g" . grip-mode)))
