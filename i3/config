@@ -239,3 +239,6 @@ client.focused_inactive $green_dim $gray $white $green_dim $green_dim
 client.unfocused		$green_dark $black $white $green_dark $green_dark
 client.urgent		   $vivred $red_dark $white $vivred $vivred
 client.placeholder $green_dark $black $white $green_dark $green_dark
+
+# Disable Apple SPI Touchpad
+exec --no-startup-id xinput set-prop "Apple SPI Touchpad" "libinput Disable While Typing Enabled" 1
