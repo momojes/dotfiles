@@ -184,3 +184,71 @@
   :bind
   (:map markdown-mode-command-map
 	("g" . grip-mode)))
+
+;; ----------------------------------------
+;; MacAdorable welcome screen
+;; ----------------------------------------
+
+(defvar my/welcome-buffer-name "*MacAdorable*")
+
+(defun my/open-welcome-screen ()
+  "Open the MacAdorable welcome screen."
+  (interactive)
+
+  (let ((buffer (get-buffer-create my/welcome-buffer-name)))
+    (with-current-buffer buffer
+      (setq buffer-read-only nil)
+      (erase-buffer)
+
+      (insert
+       "\n"
+       "              .------------------.\n"
+       "             /                    \\\n"
+       "            |     MacAdorable      |\n"
+       "            |                      |\n"
+       "            |        _[_]_         |\n"
+       "            |       /     \\        |\n"
+       "            |      |  Nix  |       |\n"
+       "            |       \\_____/        |\n"
+       "             \\                    /\n"
+       "              '------------------'\n"
+       "\n"
+       "                 Welcome, momo.\n"
+       "\n"
+       "  Files and buffers\n"
+       "    C-x C-f      Open a file\n"
+       "    C-x b        Switch buffer\n"
+       "    C-x 5 2      New frame\n"
+       "\n"
+       "  MacAdorable workflow\n"
+       "    C-c g        Open Magit\n"
+       "    C-c a        Open Org Agenda\n"
+       "    C-c c        Capture an Org entry\n"
+       "    M-x vterm    Open a Fish terminal\n"
+       "\n"
+       "  Writing and reading\n"
+       "    C-c C-e      Org export menu\n"
+       "    M-x grip-mode  Toggle Markdown preview\n"
+       "    C-x C-f      Open a PDF with pdf-tools\n"
+       "\n"
+       "  Help\n"
+       "    C-h t        Emacs tutorial\n"
+       "    C-h k        Describe a key\n"
+       "    M-x          Run a command\n"
+       "\n"
+       "  Press q to close this screen.\n")
+
+      (goto-char (point-min))
+      (special-mode)
+      (visual-line-mode -1)
+      (display-line-numbers-mode -1)
+      (hl-line-mode -1)
+
+      (local-set-key (kbd "q") #'quit-window))
+
+    (switch-to-buffer buffer)))
+
+(setq inhibit-startup-screen t
+      initial-buffer-choice #'my/open-welcome-screen)
+
+(keymap-global-set "C-c w" #'my/open-welcome-screen)
