@@ -64,6 +64,8 @@
 (setq org-default-notes-file
       "~/notes/org/inbox.org")
 
+(setq org-log-done 'time)
+
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 

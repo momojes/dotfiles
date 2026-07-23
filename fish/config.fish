@@ -24,7 +24,8 @@ alias kittyconfig='nvim ~/.config/kitty/kitty.conf'
 alias fetch='fastfetch'
 alias nup='emacsclient -c -a "" ~/notes/org/updateIdeas.org'
 alias emacs='emacsclient -c -a ""'
-
+alias garbo='nix-collect-garbage'
+alias update='sudo nixos-rebuild switch --upgrade'
 if test "$TERM" = "xterm-256color" -o "$TERM" = "eterm-color"
   set -gx COLORTERM truecolor
 end
