@@ -35,7 +35,7 @@ set $red_dark	  #660000
 exec --no-startup-id dex --autostart --environment i3
 
 # Feh Wallpaper
-exec --no-startup-id feh --no-fehbg --bg-fill ~/pictures/backgroundMacAdorable.png
+exec_always --no-startup-id feh --no-fehbg --bg-fill home/momo/pictures/backgroundMacAdorable.png
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
