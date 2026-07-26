@@ -162,7 +162,9 @@
              :hook (org-mode . org-modern-mode))
 
 (use-package ace-window
-             :bind ("M-o" . ace-window))
+  :bind ("M-o" . ace-window)
+  :config
+  (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
 (use-package ox-hugo
   :after ox)
