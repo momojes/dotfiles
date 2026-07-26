@@ -1,0 +1,48 @@
+{
+   "layer": "top",
+   "position": "top",
+   "height": 24,
+
+   "modules-left": [
+      "network"
+   ],
+
+   "modules-center": [],
+
+   "modules-right": [
+      "memory",
+      "temperature",
+      "battery",
+      "clock",
+      "custom/power"
+   ],
+
+   "network": {
+      "format-wifi": "{essid}",
+      "format-ethernet": "Ethernet",
+      "format-disconnected": "Offline",
+      "tooltip": false
+   },
+
+   "memory": {
+      "format": "{}%"
+   },
+
+   "temperature": {
+      "critical-threshold": 80,
+      "format": "{temperatureC}C"
+   },
+
+   "battery": {
+      "format": "{capacity}%"
+   },
+
+   "clock": {
+      "format": "{:%H:%M}"
+   },
+
+   "custom/power": {
+      "format": "P",
+      "on-click": "wlogout"
+   }
+}

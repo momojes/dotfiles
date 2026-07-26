@@ -1,0 +1,20 @@
+* {
+    font-family: "Maple Mono";
+    font-size: 9pt;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: #000000;
+    color: #dcdcdc;
+}
+
+#network,
+#memory,
+#temperature,
+#battery,
+#clock,
+#custom-power {
+    padding: 0 10px;
+}
