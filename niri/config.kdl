@@ -9,6 +9,12 @@
 
 prefer-no-csd
 
+spawn-at-startup "swaybg" "-i" "/home/momo/pictures/wallpapers/backgroundMacAdorable.png"
+
+overview {
+   backdrop-color "#000000"
+}
+
 input {
     keyboard {
         xkb {
@@ -588,8 +594,8 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
+    Mod+Shift+P { screenshot; }
+    Mod+P { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
