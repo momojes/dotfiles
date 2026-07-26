@@ -1,5 +1,7 @@
 (setq inhibit-startup-screen t)
 
+(add-to-list 'default-frame-alist '(undecorated . t))
+
 (load-theme 'modus-vivendi t)
 
 (set-face-attribute 'default nil
