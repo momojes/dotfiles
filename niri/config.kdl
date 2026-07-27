@@ -50,9 +50,10 @@ input {
 
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
+spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock" "-f" "timeout" "360" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "before-sleep" "swaylock" "-f"
 
 // Wallpaper Setup
-spawn-at-startup "swaybg" "-i" "/home/momo/pictures/backgroundMacAdorable.png" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/momo/pictures/wallpapers/backgroundMacAdorable.png" "-m" "fill"
 
 // ---------------------------------------------------------
 // Screenshots
@@ -384,5 +385,13 @@ binds {
 
     Mod+Control+L allow-when-locked=true {
         spawn "swaylock";
+    }
+
+    // -----------------------------------------------------
+    // Notifications
+    // -----------------------------------------------------
+
+    Mod+Shift+N {
+        spawn "makoctl" "dismiss";
     }
 }
