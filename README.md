@@ -7,10 +7,12 @@ Personal configuration files for my Linux systems
 - Emacs
 - Fish
 - Kitty
-- i3
-- qutebrowser
+- i3/Niri
+- qutebrowser/Firefox
 - Fastfetch
 - Zathura
+- Cider (Apple Music)
+- nnn
 
 ## Philosophy
 
