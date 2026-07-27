@@ -134,8 +134,8 @@ binds {
         spawn "kitty";
     }
 
-    Mod+D hotkey-overlay-title="Open Application Launcher" {
-        spawn "fuzzel";
+    Mod+Space hotkey-overlay-title="Open Application Launcher" {
+        spawn "fuzzel" "--anchor=top";
     }
 
     Mod+E hotkey-overlay-title="Open Emacs" {
