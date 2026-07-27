@@ -53,6 +53,8 @@ spawn-at-startup "mako"
 spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock" "-f" "timeout" "360" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "before-sleep" "swaylock" "-f"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
+spawn-at-startup "wlsunset" "-S" "07:00" "-s" "19:00" "-T" "6500" "-t" "4000"
+spawn-at-startup "udiskie" "--automount" "--notify"
 
 // Wallpaper Setup
 spawn-at-startup "swaybg" "-i" "/home/momo/pictures/wallpapers/backgroundMacAdorable.png" "-m" "fill"
