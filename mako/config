@@ -1,0 +1,20 @@
+font=Maple Mono 11
+
+background-color=#000000
+text-color=#ffffff
+border-color=#00aa00
+progress-color=over #00aa00
+
+border-size=2
+border-radius=0
+padding=12
+margin=12
+
+width=360
+height=120
+
+default-timeout=5000
+ignore-timeout=1
+
+anchor=top-right
+layer=overlay
