@@ -51,6 +51,8 @@ input {
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
 spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock" "-f" "timeout" "360" "niri msg action power-off-monitors" "resume" "niri msg action power-on-monitors" "before-sleep" "swaylock" "-f"
+spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
+spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 
 // Wallpaper Setup
 spawn-at-startup "swaybg" "-i" "/home/momo/pictures/wallpapers/backgroundMacAdorable.png" "-m" "fill"
@@ -393,5 +395,17 @@ binds {
 
     Mod+Shift+N {
         spawn "makoctl" "dismiss";
+    }
+
+    // -----------------------------------------------------
+    // Clipboard
+    // -----------------------------------------------------
+
+    Mod+B hotkey-overlay-title="Clipboard History" {
+        spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy";
+    }
+
+    Mod+Shift+B hotkey-overlay-title="Clear Clipboard History" {
+        spawn "cliphist" "wipe";
     }
 }
