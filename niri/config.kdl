@@ -300,17 +300,17 @@ binds {
 
     // Interactive region/window screenshot.
     Mod+Shift+P {
-        screenshot;
+        screenshot show-pointer=false;
     }
 
     // Screenshot the focused window.
-    Alt+Print {
-        screenshot-window;
+    Alt+P {
+        screenshot-window show-pointer=false;
     }
 
     // Screenshot the entire output.
     Mod+P {
-        screenshot-screen;
+        screenshot-screen show-pointer=false;
     }
 
     // -----------------------------------------------------
