@@ -58,7 +58,7 @@ spawn-at-startup "swaybg" "-i" "/home/jesus/Pictures/Wallpapers/macadorable.png"
 // Screenshots
 // ---------------------------------------------------------
 
-screenshot-path "~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png"
+screenshot-path "~/pictures/screenshots/screenshot-%Y-%m-%d-%H-%M-%S.png"
 
 // ---------------------------------------------------------
 // Startup hotkey overlay
@@ -299,7 +299,7 @@ binds {
     // -----------------------------------------------------
 
     // Interactive region/window screenshot.
-    Print {
+    Mod+Shift+P {
         screenshot;
     }
 
@@ -309,7 +309,7 @@ binds {
     }
 
     // Screenshot the entire output.
-    Ctrl+Print {
+    Mod+P {
         screenshot-screen;
     }
 
