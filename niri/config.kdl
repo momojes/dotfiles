@@ -51,8 +51,8 @@ input {
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
 
-// Change this to your actual wallpaper filename.
-spawn-at-startup "swaybg" "-i" "/home/jesus/Pictures/Wallpapers/macadorable.png" "-m" "fill"
+// Wallpaper Setup
+spawn-at-startup "swaybg" "-i" "/home/momo/pictures/backgroundMacAdorable.png" "-m" "fill"
 
 // ---------------------------------------------------------
 // Screenshots
@@ -143,7 +143,7 @@ binds {
     }
 
     Mod+Shift+E hotkey-overlay-title="Open Power Menu" {
-        spawn "wlogout" "--layout" "/home/jesus/.config/wlogout/layout" "--css" "/home/jesus/.config/wlogout/style.css";
+        spawn "wlogout" "--layout" "/home/momo/.config/wlogout/layout" "--css" "/home/momo/.config/wlogout/style.css";
     }
 
     // -----------------------------------------------------
@@ -270,14 +270,6 @@ binds {
         focus-workspace-up;
     }
 
-    Mod+Shift+Page_Down {
-        move-column-to-workspace-down;
-    }
-
-    Mod+Shift+Page_Up {
-        move-column-to-workspace-up;
-    }
-
     Mod+Shift+U {
         move-column-to-workspace-down;
     }
@@ -384,5 +376,13 @@ binds {
     // Show the hotkey overlay manually.
     Mod+Shift+Slash {
         show-hotkey-overlay;
+    }
+
+    // -----------------------------------------------------
+    // Lock Screen
+    // -----------------------------------------------------
+
+    Mod+Control+L allow-when-locked=true {
+        spawn "swaylock";
     }
 }
